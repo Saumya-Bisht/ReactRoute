@@ -13,9 +13,12 @@ import ProductDetails from './components/ProductDetails';
 import PageNotFound from './components/PageNotFound';
 import AddtoCart from './components/AddtoCart';
 
+// ---redux counter app---
+import Counter from './components/reduxcounter/Counter';
+
 
 function App() {
-  const {isloggedin}=useContext(myContext)
+  // const {isloggedin}=useContext(myContext)
   return (
     <div className="App">
      {/* <h1>hiiii</h1> */}
@@ -24,16 +27,18 @@ function App() {
       isloggedin ? <div><Nav/><Home/></div> : <Login/>
      } */}
 
-     <Nav/>
+     {/* <Nav/>
      <Routes>
       <Route path="/" element={<Home/>}/>
-      {/* <Route path="/profile" element={<Profile/>}/> */}
+      <Route path="/profile" element={<Profile/>}/>
       <Route path="/products" element={<Products/>}/>
-      {/* <Route path="/support" element={<Contact/>}/> */}
-      {/* <Route path="/productdetails/:id" element={<ProductDetails/>}/> */}
+      <Route path="/support" element={<Contact/>}/>
+      <Route path="/productdetails/:id" element={<ProductDetails/>}/>
       <Route path="/cart/:id" element={<AddtoCart/>}/>
       <Route path="*" element={<PageNotFound/>}/>
-     </Routes>
+     </Routes> */}
+     <Counter/>
+     {/* <h1>hiiii</h1> */}
       
     </div>
   );
