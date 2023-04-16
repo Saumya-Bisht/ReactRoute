@@ -12,9 +12,10 @@ import Contact from './components/Contact';
 import ProductDetails from './components/ProductDetails';
 import PageNotFound from './components/PageNotFound';
 import AddtoCart from './components/AddtoCart';
+import Product from './components/Product';
 
 // ---redux counter app---
-import Counter from './components/reduxcounter/Counter';
+// import Counter from './components/reduxcounter/Counter';
 
 
 function App() {
@@ -27,17 +28,18 @@ function App() {
       isloggedin ? <div><Nav/><Home/></div> : <Login/>
      } */}
 
-     {/* <Nav/>
+     <Nav/>
      <Routes>
       <Route path="/" element={<Home/>}/>
-      <Route path="/profile" element={<Profile/>}/>
-      <Route path="/products" element={<Products/>}/>
-      <Route path="/support" element={<Contact/>}/>
-      <Route path="/productdetails/:id" element={<ProductDetails/>}/>
-      <Route path="/cart/:id" element={<AddtoCart/>}/>
+      {/* <Route path="/profile" element={<Profile/>}/> */}
+      {/* <Route path="/products" element={<Products/>}/> */}
+      <Route path="/product" element={<Product/>}/>
+      {/* <Route path="/support" element={<Contact/>}/> */}
+      {/* <Route path="/productdetails/:id" element={<ProductDetails/>}/> */}
+      <Route path="/cart" element={<AddtoCart/>}/>
       <Route path="*" element={<PageNotFound/>}/>
-     </Routes> */}
-     <Counter/>
+     </Routes>
+     {/* <Counter/> */}
      {/* <h1>hiiii</h1> */}
       
     </div>

@@ -15,7 +15,8 @@ function Nav(props) {
       <div id="menu">
         <Link to="/">Home</Link>
         {/* <Link to="/profile">Profile</Link> */}
-        <Link to="/products">Products</Link>
+        {/* <Link to="/products">Products</Link> */}
+        <Link to="/product">Products</Link>
         {/* <Link to="/support">ContactUs</Link> */}
         <Link to="/cart">Cart</Link>
         <button onClick={()=>{

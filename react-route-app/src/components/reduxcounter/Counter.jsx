@@ -25,7 +25,7 @@ function Counter() {
     <div style={{display:"flex",alignItems:"center",flexDirection:"column"}} >
         <h1>Redux's Counter app</h1>
         <div style={{display:"flex",flexDirection:"column",alignItems:"center",boxShadow:"12px 2px 20px 0px black",width:"50%",margin:"10% auto",padding:"40px"}}>
-        <div><h1>{counter}</h1></div>
+        <div><h1>Count:    {counter}</h1></div>
         <div style={{display:"flex",justifyContent:"space-evenly",width:"80%"}}>
             <button  onClick={() => dispatch(increment())}  style={style}>Increase Count</button>
             <button   onClick={() => dispatch(decrement())} style={style}>Decrease Count</button>

@@ -12,17 +12,17 @@ import {myStore} from './components/reduxcounter/Store.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-//  <BrowserRouter>
-//    <CustomProvider>
-//      <App />
-//    </CustomProvider>
-// </BrowserRouter> 
+ <BrowserRouter>
+   <CustomProvider>
+     <App />
+   </CustomProvider>
+</BrowserRouter> 
 // {/* <App /> */}
- <React.StrictMode>
-  <Provider store={myStore}>
-    <App/>
-  </Provider> 
-</React.StrictMode>   
+//  <React.StrictMode>
+//   <Provider store={myStore}>
+//     <App/>
+//   </Provider> 
+// </React.StrictMode>   
  
 );
 
