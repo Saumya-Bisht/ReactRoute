@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import CustomProvider from './components/Context';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import myStore from './components/reduxcounter/Store';
+import {myStore} from './components/reduxcounter/Store.js';
 
 
 
@@ -17,11 +17,12 @@ root.render(
 //      <App />
 //    </CustomProvider>
 // </BrowserRouter> 
-<React.StrictMode>
+// {/* <App /> */}
+ <React.StrictMode>
   <Provider store={myStore}>
     <App/>
   </Provider> 
-</React.StrictMode>  
+</React.StrictMode>   
  
 );
 
