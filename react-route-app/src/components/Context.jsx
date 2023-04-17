@@ -16,9 +16,17 @@ import { createContext, useEffect, useState } from "react";
  export const myContext =createContext();
 
 function CustomProvider({children}){
+    
+    const [isloggedin, setIsLoggedIn] = useState(true);
     const [product,setProduct]=useState([]);
     const[cart,setCart]=useState([])
     const [cartCount,setCartCount]=useState(0);
+    const [user,setUser]=  useState({
+        name:"Saumya",
+        password:""
+      })
+   
+    
 
     useEffect(()=>{
         fetch('https://fakestoreapi.com/products')
@@ -28,7 +36,7 @@ function CustomProvider({children}){
         })
 
     },[])
-    return <myContext.Provider value={{product,cart,setCart,cartCount,setCartCount}}>
+    return <myContext.Provider value={{user,setUser,product,cart,setCart,cartCount,setCartCount,isloggedin,setIsLoggedIn}}>
         {children}
     </myContext.Provider>
 }

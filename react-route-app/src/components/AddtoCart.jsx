@@ -45,13 +45,13 @@ const AddtoCart = () => {
   return (
    <>
      <div className='container'>
-      {cart.lenght>0 ? <h1>Data not Fetch</h1> 
+      {cart.length <= 0 ? <h1 style={{margin:"5% auto",width:"90vw"}}>Cart is Empty!! Add some Products.</h1> 
       :
       cart.map((ele) => {
         return<div key={ele.id} className="cardStyle">
           <img width="200" height="200"  src={ele.image} alt="product image" />
           <h3>{ele.category}</h3>
-          <p>Price: {ele.price} $</p>
+          <p className='price'>Price: {ele.price} $</p>
           <button className='cartbutton' onClick={()=>{
             removeCart(ele.id)
           }} >Remove Product</button>

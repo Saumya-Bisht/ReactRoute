@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 
 
 function Nav(props) {
-    const {setIsLoggedIn,setUser}=useContext(myContext);
+    const {setIsLoggedIn,setUser,user}=useContext(myContext);
   return (
     <div className="nav">
       <div id="title">
@@ -19,13 +19,13 @@ function Nav(props) {
         <Link to="/product">Products</Link>
         {/* <Link to="/support">ContactUs</Link> */}
         <Link to="/cart">Cart</Link>
-        <button onClick={()=>{
+        <button style={{color:"white",backgroundColor:"green",border:"0",height:"25px",width:"100px",cursor:"pointer"}} onClick={()=>{
             setIsLoggedIn(false)
         }}>
           Logout
         </button>
         <span  style={{ marginLeft: "30px", color: "yellow", fontSize: "22px" }}>
-        {/* <b>{user.name}</b> */} 
+        <b>{user.name}</b> 
         </span>
       </div>
     </div>

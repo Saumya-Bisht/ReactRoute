@@ -19,26 +19,37 @@ import Product from './components/Product';
 
 
 function App() {
-  // const {isloggedin}=useContext(myContext)
+  const {isloggedin}=useContext(myContext)
   return (
     <div className="App">
      {/* <h1>hiiii</h1> */}
      {/* <Nav/> */}
-     {/* {
-      isloggedin ? <div><Nav/><Home/></div> : <Login/>
-     } */}
+     {
+      isloggedin ? <div>
+        <Nav/>
 
-     <Nav/>
      <Routes>
       <Route path="/" element={<Home/>}/>
-      {/* <Route path="/profile" element={<Profile/>}/> */}
-      {/* <Route path="/products" element={<Products/>}/> */}
       <Route path="/product" element={<Product/>}/>
-      {/* <Route path="/support" element={<Contact/>}/> */}
-      {/* <Route path="/productdetails/:id" element={<ProductDetails/>}/> */}
       <Route path="/cart" element={<AddtoCart/>}/>
       <Route path="*" element={<PageNotFound/>}/>
      </Routes>
+      </div> : <div> <p >Login credentials are as below: <br/>
+      Username:admin<br/>
+      Password:admin@123</p><Login/></div>
+     }
+
+     {/* <Nav/> */}
+     {/* <Routes> */}
+      {/* <Route path="/" element={<Home/>}/> */}
+      {/* <Route path="/profile" element={<Profile/>}/> */}
+      {/* <Route path="/products" element={<Products/>}/> */}
+      {/* <Route path="/product" element={<Product/>}/> */}
+      {/* <Route path="/support" element={<Contact/>}/> */}
+      {/* <Route path="/productdetails/:id" element={<ProductDetails/>}/> */}
+      {/* <Route path="/cart" element={<AddtoCart/>}/> */}
+      {/* <Route path="*" element={<PageNotFound/>}/> */}
+     {/* </Routes> */}
      {/* <Counter/> */}
      {/* <h1>hiiii</h1> */}
       

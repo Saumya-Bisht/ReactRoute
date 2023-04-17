@@ -79,6 +79,7 @@ function Login(props) {
     name:"",
     password:""
   })
+  // console.log(user.name)
   const handleAuthentication = () => {
     if (
       (user.name === "saumya" && user.password === "saumya@123") ||
@@ -89,6 +90,7 @@ function Login(props) {
       alert("Enter Proper Credentials");
     }
   };
+ 
   return (
     <div style={style}>
         <h3>Login Form</h3>
@@ -108,5 +110,6 @@ function Login(props) {
       </div>
   )
 }
+
 
 export default Login
